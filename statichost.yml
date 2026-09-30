@@ -1,0 +1,4 @@
+# Bouwinstructies voor statichost.eu: geen bouwstap, de pagina staat kant-en-klaar in public/
+image: node:22
+command: echo "geen bouwstap nodig"
+public: public
