@@ -5,21 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>a-bit-odd</title>
   <link rel="icon" href="favicon.png">
-  <style>
-    html, body { height: 100%; margin: 0; }
-    body {
-      background: #17181B;
-      display: grid;
-      place-items: center;
-    }
-    img {
-      width: min(70vw, 420px);
-      height: auto;
-      image-rendering: pixelated;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <img src="logo.svg" alt="a-bit-odd">
+  <svg viewBox="-55 -55 110 110" preserveAspectRatio="xMidYMid meet" aria-label="a-bit-odd">
+    <g id="strands"></g>
+    <image class="logo" href="logo.svg" x="-18" y="-11.25" width="36" height="22.5">
+      <title>a-bit-odd</title>
+    </image>
+    <g id="nodes"></g>
+  </svg>
+
+  <script src="pixels.js"></script>
+  <script>
+    // De drie links: label, adres en hoek (in graden, 0 = rechts)
+    Pixels.drawMindmap({
+      strandsLayer: document.getElementById("strands"),
+      nodesLayer: document.getElementById("nodes"),
+      radius: 38,
+      pixel: 0.3,
+      nodes: [
+        { label: "projecten", href: "projecten/", angle: -90 },
+        { label: "koans",     href: "koans/",     angle: 28 },
+        { label: "a-bit-add", href: "a-bit-add/", angle: 152 },
+      ],
+    });
+  </script>
 </body>
 </html>

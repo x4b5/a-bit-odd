@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>projecten · a-bit-odd</title>
+  <link rel="icon" href="../favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <svg viewBox="-62 -55 124 110" preserveAspectRatio="xMidYMid meet" aria-label="projecten">
+    <g id="strands"></g>
+    <a class="node" href="../" aria-label="terug naar a-bit-odd" id="center"></a>
+    <g id="nodes"></g>
+  </svg>
+  <p class="info" id="info" aria-live="polite"></p>
+
+  <script src="../pixels.js"></script>
+  <script>
+    const PROJECTS = [
+      { label: "babl",         angle: -90, href: "https://babl-chi.vercel.app",
+        info: "Limburgs inspreken, Nederlandse tekst terug" },
+      { label: "digi-fort",    angle: -18, href: "https://digi-fort.nl",
+        info: "Digitale veiligheid in gewone taal" },
+      { label: "pii-scrubber", angle: 54,
+        info: "Haalt persoonsgegevens uit tekst, alles blijft in de browser (nog niet online)" },
+      { label: "mestreech",    angle: 126, href: "https://mestreech.vercel.app",
+        info: "3D-ontdekkingsgame door Maastricht (op uitnodiging)" },
+      { label: "ai-wegwijzer", angle: 198, href: "https://ai-wegwijzer.vercel.app",
+        info: "AI-geletterdheid in gewone taal" },
+    ];
+
+    const info = document.getElementById("info");
+    document.getElementById("center").appendChild(Pixels.pixelWord("projecten", 0, 0, 0.4));
+
+    Pixels.drawMindmap({
+      strandsLayer: document.getElementById("strands"),
+      nodesLayer: document.getElementById("nodes"),
+      radius: 38,
+      pixel: 0.28,
+      nodes: PROJECTS,
+      onInfo: (text) => { info.textContent = text; },
+    });
+  </script>
+</body>
+</html>

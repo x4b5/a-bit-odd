@@ -1,0 +1,32 @@
+/* Gedeeld door alle pagina's */
+:root {
+  --bg: #17181B;
+  --thread: #3A3C42;
+  --ink: #EDEDEA;
+  --muted: #6B6E76;
+  --red: #FF6259;
+}
+html, body { height: 100%; margin: 0; }
+body { background: var(--bg); overflow: hidden; }
+svg { display: block; width: 100vw; height: 100vh; }
+
+.strand { stroke: var(--thread); stroke-width: 0.4; transition: stroke 0.2s; }
+.pad { fill: var(--bg); }
+.letters { fill: var(--ink); transition: fill 0.2s; }
+.node:hover .letters, .node:focus .letters { fill: var(--red); }
+.node.off .letters, .node.off:hover .letters, .node.off:focus .letters { fill: var(--muted); }
+.node:focus { outline: none; }
+.logo { image-rendering: pixelated; }
+
+.info {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 6vh;
+  margin: 0;
+  text-align: center;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 15px;
+  color: var(--muted);
+  min-height: 1.4em;
+}
