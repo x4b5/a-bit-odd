@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>a-bit-add · a-bit-odd</title>
+  <link rel="icon" href="../favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body { overflow: auto; }
+    .page {
+      max-width: 38rem;
+      margin: 0 auto;
+      padding: 12vh 16px 20vh;
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--ink);
+    }
+    .title { display: block; width: min(60vw, 260px); margin-bottom: 8vh; }
+    .title svg { width: 100%; height: auto; }
+    .page p { margin: 0 0 1.4em; }
+    .page blockquote {
+      margin: 0 0 1.4em;
+      padding-left: 1em;
+      border-left: 2px solid var(--thread);
+      color: var(--muted);
+    }
+    .loop { color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--muted); }
+    .loop:hover, .loop:focus { color: var(--red); border-color: var(--red); outline: none; }
+  </style>
+</head>
+<body>
+  <main class="page" id="begin">
+    <a class="title node" href="../" aria-label="terug naar a-bit-odd">
+      <svg id="title" viewBox="-1 -1 100 18"></svg>
+    </a>
+
+    <p>Hoe voelt ADD? Goede vraag. Om dat te beantwoorden moet ik eerst iets anders uitleggen.</p>
+
+    <p>Vanochtend ging ik een briefje zoeken. Daarvoor moest ik eerst het licht aandoen. De lamp bleek kapot, dus ik pakte een nieuwe uit de la. In de la lag een batterij, en die hoorde eigenlijk in de afstandsbediening. De afstandsbediening lag op de bank, naast een boek dat ik half gelezen had. Hoofdstuk drie ging over concentratie, met een oefening: "Beschrijf hoe het voelt als je afgeleid raakt."</p>
+
+    <p>Dus ik pakte pen en papier en schreef:</p>
+
+    <blockquote>"Hoe voelt ADD? Goede vraag. Om dat te beantwoorden moet ik eerst iets anders uitleggen. Vanochtend ging ik een briefje zoeken. Daarvoor moest ik eerst het licht aandoen. De lamp bleek kapot, dus ik pakte een nieuwe uit de la. In de la lag—"</blockquote>
+
+    <p>Wacht. Dit heb ik al eens geschreven. Ik weet het zeker. Het staat op een briefje. Dat briefje ligt ergens. Om het te vinden moet ik eerst het licht aandoen.</p>
+
+    <p>De lamp is nog steeds kapot. Ik pak een nieuwe uit de la. In de la ligt een briefje.</p>
+
+    <p>Er staat op: <a class="loop" href="#begin">"Hoe voelt ADD? Goede vraag."</a></p>
+  </main>
+
+  <script src="../pixels.js"></script>
+  <script>
+    // Titel in pixelletters: 9 tekens × 11 − 2 = 97 pixels breed, 16 hoog
+    document.getElementById("title").appendChild(Pixels.pixelWord("a-bit-add", 48.5, 8, 1));
+  </script>
+</body>
+</html>
