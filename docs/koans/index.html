@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>koans · a-bit-odd</title>
+  <link rel="icon" href="../favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body { overflow: auto; }
+    .page {
+      max-width: 38rem;
+      margin: 0 auto;
+      padding: 12vh 16px 20vh;
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--ink);
+    }
+    /* 55 van de 100 pixels van a-bit-add, dus 55% van die breedte */
+    .title { display: block; width: min(33vw, 143px); margin-bottom: 4vh; }
+    .title svg { width: 100%; height: auto; }
+    .intro { color: var(--muted); margin: 0 0 10vh; }
+    .koan { margin: 0 0 10vh; }
+    .koan h2 {
+      font-size: 16px;
+      font-weight: 500;
+      margin: 0 0 1em;
+      padding-left: 1em;
+      border-left: 2px solid var(--thread);
+    }
+    .koan p { margin: 0 0 1.4em; }
+    .koan .line { margin: 0 0 0.4em; }
+    .koan .line + p:not(.line) { margin-top: 1.4em; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <a class="title node" href="../" aria-label="terug naar a-bit-odd">
+      <svg id="title" viewBox="-1 -1 55 18"></svg>
+    </a>
+
+    <p class="intro">Variaties op de Poortloze Poort.</p>
+
+    <section class="koan">
+      <h2>Slangenbeet</h2>
+      <p>De leerling vroeg aan de meester of een slang ook de boeddhanatuur heeft.</p>
+      <p>De meester zette zijn giftanden in de arm van de leerling. De leerling schreeuwde het uit van de pijn. “Sst”, siste de meester.</p>
+    </section>
+
+    <section class="koan">
+      <h2>Waar is hier de nooduitgang?</h2>
+      <p class="line">Leerling: Heeft de hond een boeddhanatuur?</p>
+      <p class="line">Meester: Dus jij gaat er vanuit dat er een boeddhanatuur is?</p>
+      <p class="line">Leerling: Is er dan geen boeddhanatuur?</p>
+      <p class="line">Meester: Dus jij gaat er vanuit dat er een natuur is?</p>
+      <p class="line">Leerling: Is er dan geen natuur?</p>
+      <p class="line">Meester: Dus jij gaat er vanuit dat er iets is?</p>
+      <p class="line">Leerling: Is er dan niets?</p>
+      <p class="line">Meester: Dus jij gaat er vanuit dat er een niets-iets is?</p>
+      <p class="line">Leerling: Zo komen we niet verder.</p>
+      <p class="line">Meester: Dus jij gaat er vanuit dat er een verder is?</p>
+      <p class="line">Leerling loopt weg.</p>
+      <p class="line">Meester: Dus jij gaat er vanuit dat er een ontsnappingsclausule is.</p>
+      <p class="line">Leerling loopt verder weg, draait zich om en schreeuwt terug: Ik ga nergens meer vanuit!</p>
+      <p class="line">Meester: Dus jij gaat er vanuit dat je nergens vanuit kan gaan?</p>
+    </section>
+
+    <section class="koan">
+      <h2>Defect</h2>
+      <p class="line">Monnik: Kunt u mij onderricht geven?</p>
+      <p class="line">Meester: Heb je al ontbeten?</p>
+      <p class="line">Monnik: Jazeker.</p>
+      <p class="line">Meester: Ga dan je schaaltjes maar afwassen.</p>
+      <p>De volgende dag stond een vaatwasser in de keuken.</p>
+      <p class="line">Meester: Waarom staat deze vaatwasser in de keuken?</p>
+      <p class="line">Monnik: Deze vaatwasser heb ik laten bezorgen.</p>
+      <p class="line">Meester: Waarom?</p>
+      <p class="line">Monnik: Omdat ik dan meer tijd heb voor uw onderricht.</p>
+      <p>De volgende dag bleek de vaatwasser defect te zijn.</p>
+      <p class="line">Monnik: Waarom is de vaatwasser defect?</p>
+      <p class="line">Meester: Ik heb de vaatwasser kapot gemaakt.</p>
+      <p class="line">Monnik: Waarom?</p>
+      <p class="line">Meester: Omdat je dan meer tijd hebt voor mijn onderricht.</p>
+    </section>
+
+    <section class="koan">
+      <h2>Goed geschoten</h2>
+      <p>Tijdens een bijeenkomst op de Gierberg hield Boeddha een pistool omhoog en zwaaide ermee in het rond. Iedereen schrok, behalve Mahakashyapa.</p>
+      <p>Boeddha zei: ‘Dit is het wijsheidsoog, de geest van nirwana, de vorm zonder vorm, de poortloze poort van de leer. Niet over te dragen door woorden, maar alleen door een schot in het hart.’ Boeddha schoot een aantal maal in de lucht. Iedereen rende weg, behalve Mahakashyapa bleef staan. Hij keek Boeddha glimlachend aan en schoof een bloem in de loop.</p>
+    </section>
+
+    <section class="koan">
+      <h2>Drijfveer</h2>
+      <p>De meester ging bij een kluizenaar langs en zei: ‘Lukt het een beetje?’ De meester kreeg geen antwoord maar zag het lichaam van de kluizenaar op het water drijven.</p>
+      <p>De meester zei: “Aha, gefeliciteerd. Eindelijk is het je niet gelukt!”</p>
+    </section>
+  </main>
+
+  <script src="../pixels.js"></script>
+  <script>
+    // Titel in pixelletters: 5 tekens × 11 − 2 = 53 pixels breed, 16 hoog
+    document.getElementById("title").appendChild(Pixels.pixelWord("koans", 26.5, 8, 1));
+  </script>
+</body>
+</html>
