@@ -19,16 +19,22 @@
 
   <script src="../pixels.js"></script>
   <script>
+    // Hoeken niet gelijk verdeeld: geen knooppunt vlak naast het midden, anders
+    // verdwijnt de draad achter "projecten". pii-scrubber is te breed voor het paar onderaan.
     const PROJECTS = [
       { label: "babl",         angle: -90, href: "https://babl-chi.vercel.app",
         info: "Limburgs inspreken, Nederlandse tekst terug" },
-      { label: "digi-fort",    angle: -18, href: "https://digi-fort.nl",
+      { label: "digi-fort",    angle: -40, href: "https://digi-fort.nl",
         info: "Digitale veiligheid in gewone taal" },
-      { label: "pii-scrubber", angle: 54,
+      { label: "pii-scrubber", angle: 25,
         info: "Haalt persoonsgegevens uit tekst, alles blijft in de browser (nog niet online)" },
-      { label: "mestreech",    angle: 126, href: "https://mestreech.vercel.app",
+      { label: "vloertaal",    angle: 63, href: "https://vloertaal.vercel.app",
+        info: "Nederlands voor op de werkvloer, met hulp in je eigen taal" },
+      { label: "simulatie",    angle: 117, href: "https://x4b5.github.io/simulatie/",
+        info: "Bijna geraakt: 3D-oefening in een distributiecentrum, ook met VR-bril" },
+      { label: "mestreech",    angle: 155, href: "https://mestreech.vercel.app",
         info: "3D-ontdekkingsgame door Maastricht (op uitnodiging)" },
-      { label: "ai-wegwijzer", angle: 198, href: "https://ai-wegwijzer.vercel.app",
+      { label: "ai-wegwijzer", angle: 220, href: "https://ai-wegwijzer.vercel.app",
         info: "AI-geletterdheid in gewone taal" },
     ];
 

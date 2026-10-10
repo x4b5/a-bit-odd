@@ -34,6 +34,7 @@
     s: x([".XXXXXXXX", "XXXXXXXXX", "XX.......", "XXXXXXXX.", ".XXXXXXXX", ".......XX", ".......XX", "XXXXXXXXX", "XXXXXXXX."]),
     t: tall([E, ".XX......", ".XX......", ".XX......"], ["XXXXXXX..", "XXXXXXX..", ...times(".XX......", 5), ".XXXXXXX.", "..XXXXXX."]),
     u: x([...times("XX.....XX", 7), "XXXXXXXXX", ".XXXXXXXX"]),
+    v: x([...times("XX.....XX", 4), "XXX...XXX", ".XX...XX.", ".XXX.XXX.", "..XXXXX..", "...XXX..."]),
     w: x([...ROUND, "XX..X..XX", "XX..X..XX", "XXXXXXXXX", ".XXX.XXX."]),
     z: x(["XXXXXXXXX", "XXXXXXXXX", ".....XXX.", "....XXX..", "...XXX...", "..XXX....", ".XXX.....", "XXXXXXXXX", "XXXXXXXXX"]),
     "-": x([E, E, E, "..XXXXX..", "..XXXXX..", E, E, E, E]),
