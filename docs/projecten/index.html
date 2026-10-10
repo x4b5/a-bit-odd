@@ -6,49 +6,113 @@
   <title>projecten · a-bit-odd</title>
   <link rel="icon" href="../favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="../style.css">
+  <style>
+    body { overflow: auto; }
+    .page {
+      max-width: 38rem;
+      margin: 0 auto;
+      padding: 12vh 16px 20vh;
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--ink);
+    }
+    /* 97 pixels breed, in verhouding tot de koans-titel (53 pixels → 143px) */
+    .title { display: block; width: min(60vw, 262px); margin-bottom: 10vh; }
+    .title svg { width: 100%; height: auto; }
+
+    .project { margin: 0 0 10vh; }
+    .project a { color: inherit; text-decoration: none; }
+    .shot {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 10;
+      border: 1px solid var(--thread);
+      transition: border-color 0.2s;
+    }
+    .project h2 {
+      font-size: 16px;
+      font-weight: 500;
+      margin: 1.2em 0 0.4em;
+      transition: color 0.2s;
+    }
+    .project p { margin: 0; }
+    .project a:hover .shot, .project a:focus-visible .shot { border-color: var(--red); }
+    .project a:hover h2, .project a:focus-visible h2 { color: var(--red); }
+    .project a:focus { outline: none; }
+
+    .project.off .shot { filter: grayscale(1); opacity: 0.5; }
+    .project.off h2 { color: var(--muted); }
+  </style>
 </head>
 <body>
-  <svg viewBox="-62 -55 124 110" preserveAspectRatio="xMidYMid meet" aria-label="projecten">
-    <g id="strands"></g>
-    <a class="node" href="../" aria-label="terug naar a-bit-odd" id="center"></a>
-    <g id="nodes"></g>
-  </svg>
-  <p class="info" id="info" aria-live="polite"></p>
+  <main class="page">
+    <a class="title node" href="../" aria-label="terug naar a-bit-odd">
+      <svg id="title" viewBox="-1 -1 99 18"></svg>
+    </a>
+
+    <section class="project">
+      <a href="https://babl-chi.vercel.app">
+        <img class="shot" src="img/babl.webp" width="960" height="600" alt="Voorpagina van babl" loading="lazy">
+        <h2>babl</h2>
+        <p>Spreek Limburgs in en krijg Nederlandse tekst terug. Op uitnodiging.</p>
+      </a>
+    </section>
+
+    <section class="project">
+      <a href="https://digi-fort.nl">
+        <img class="shot" src="img/digi-fort.webp" width="960" height="600" alt="Voorpagina van digi-fort" loading="lazy">
+        <h2>digi-fort</h2>
+        <p>Digitale veiligheid in gewone taal. Stap voor stap van open huis naar fort, zonder bangmakerij en zonder reclame.</p>
+      </a>
+    </section>
+
+    <section class="project">
+      <a href="https://vloertaal.vercel.app">
+        <img class="shot" src="img/vloertaal.webp" width="960" height="600" alt="Voorpagina van vloertaal" loading="lazy">
+        <h2>vloertaal</h2>
+        <p>Nederlands leren voor op de werkvloer, in de stijl van Duolingo. Via het Engels, met hulp in je eigen taal: Arabisch, Tigrinya, Oekraïens en meer.</p>
+      </a>
+    </section>
+
+    <section class="project">
+      <a href="https://x4b5.github.io/simulatie/">
+        <img class="shot" src="img/simulatie.webp" width="960" height="600" alt="Voorpagina van de simulatie Bijna geraakt" loading="lazy">
+        <h2>simulatie</h2>
+        <p>Bijna geraakt: een 3D-oefening in een distributiecentrum. Een heftruck rijdt je bijna aan en jij kiest hoe je reageert. Werkt ook met een VR-bril.</p>
+      </a>
+    </section>
+
+    <section class="project">
+      <a href="https://mestreech.vercel.app">
+        <img class="shot" src="img/mestreech.webp" width="960" height="600" alt="Voorpagina van mestreech" loading="lazy">
+        <h2>mestreech</h2>
+        <p>Een 3D-wandeling door Maastricht. Praat met de mensen, beantwoord vragen en zoek de verloren vlaaistukken van Oma Fieny. Op uitnodiging.</p>
+      </a>
+    </section>
+
+    <section class="project">
+      <a href="https://ai-wegwijzer.vercel.app">
+        <img class="shot" src="img/ai-wegwijzer.webp" width="960" height="600" alt="Voorpagina van ai-wegwijzer" loading="lazy">
+        <h2>ai-wegwijzer</h2>
+        <p>AI-geletterdheid in gewone taal, met een quiz om te zien wat je al weet.</p>
+      </a>
+    </section>
+
+    <section class="project off">
+      <img class="shot" src="img/pii-scrubber.webp" width="960" height="600" alt="Voorpagina van pii-scrubber" loading="lazy">
+      <h2>pii-scrubber</h2>
+      <p>Haalt namen, adressen en andere persoonsgegevens uit een tekst. Alles blijft in je eigen browser. Nog niet online.</p>
+    </section>
+  </main>
 
   <script src="../pixels.js"></script>
   <script>
-    // Hoeken niet gelijk verdeeld: geen knooppunt vlak naast het midden, anders
-    // verdwijnt de draad achter "projecten". pii-scrubber is te breed voor het paar onderaan.
-    const PROJECTS = [
-      { label: "babl",         angle: -90, href: "https://babl-chi.vercel.app",
-        info: "Limburgs inspreken, Nederlandse tekst terug" },
-      { label: "digi-fort",    angle: -40, href: "https://digi-fort.nl",
-        info: "Digitale veiligheid in gewone taal" },
-      { label: "pii-scrubber", angle: 25,
-        info: "Haalt persoonsgegevens uit tekst, alles blijft in de browser (nog niet online)" },
-      { label: "vloertaal",    angle: 63, href: "https://vloertaal.vercel.app",
-        info: "Nederlands voor op de werkvloer, met hulp in je eigen taal" },
-      { label: "simulatie",    angle: 117, href: "https://x4b5.github.io/simulatie/",
-        info: "Bijna geraakt: 3D-oefening in een distributiecentrum, ook met VR-bril" },
-      { label: "mestreech",    angle: 155, href: "https://mestreech.vercel.app",
-        info: "3D-ontdekkingsgame door Maastricht (op uitnodiging)" },
-      { label: "ai-wegwijzer", angle: 220, href: "https://ai-wegwijzer.vercel.app",
-        info: "AI-geletterdheid in gewone taal" },
-    ];
-
-    const info = document.getElementById("info");
-    document.getElementById("center").appendChild(Pixels.pixelWord("projecten", 0, 0, 0.4));
-
-    Pixels.drawMindmap({
-      strandsLayer: document.getElementById("strands"),
-      nodesLayer: document.getElementById("nodes"),
-      radius: 38,
-      pixel: 0.28,
-      nodes: PROJECTS,
-      onInfo: (text) => { info.textContent = text; },
-    });
+    // Titel in pixelletters: 9 tekens × 11 − 2 = 97 pixels breed, 16 hoog
+    document.getElementById("title").appendChild(Pixels.pixelWord("projecten", 48.5, 8, 1));
   </script>
 </body>
 </html>
