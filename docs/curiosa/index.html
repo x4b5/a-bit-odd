@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>verhalen · a-bit-odd</title>
+  <title>curiosa · a-bit-odd</title>
   <link rel="icon" href="../favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
@@ -19,8 +19,9 @@
       line-height: 1.75;
       color: var(--ink);
     }
-    /* 88 van de 100 pixels van a-bit-add, dus 88% van die breedte */
-    .title { display: block; width: min(53vw, 229px); margin-bottom: 10vh; }
+    /* 77 van de 100 pixels van a-bit-add, dus 77% van die breedte */
+    .title { display: block; width: min(46vw, 200px); margin-bottom: 4vh; }
+    .intro { color: var(--muted); margin: 0 0 10vh; }
     .title svg { width: 100%; height: auto; }
     .verhaal { margin: 0 0 10vh; }
     .verhaal h2 {
@@ -37,8 +38,10 @@
 <body>
   <main class="page">
     <a class="title node" href="../" aria-label="terug naar a-bit-odd">
-      <svg id="title" viewBox="-1 -1 88 18"></svg>
+      <svg id="title" viewBox="-1 -1 77 18"></svg>
     </a>
+
+    <p class="intro">en andere snuisterijen</p>
 
     <section class="verhaal">
       <h2>Het tweede kopje</h2>
@@ -80,8 +83,8 @@
 
   <script src="../pixels.js"></script>
   <script>
-    // Titel in pixelletters: 8 tekens × 11 − 2 = 86 pixels breed, 16 hoog
-    document.getElementById("title").appendChild(Pixels.pixelWord("verhalen", 43, 8, 1));
+    // Titel in pixelletters: 7 tekens × 11 − 2 = 75 pixels breed, 16 hoog
+    document.getElementById("title").appendChild(Pixels.pixelWord("curiosa", 37.5, 8, 1));
   </script>
 </body>
 </html>
